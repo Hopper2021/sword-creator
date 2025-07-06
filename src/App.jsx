@@ -27,8 +27,8 @@ export const COLORS = [
 
 export const SPLIT_OPTIONS = [
   'All 1 color',
-  '50% top / 50% bottom split',
-  '75% top / 25% bottom split',
+  '50% / 50%',
+  '75% / 25%',
 ]
 
 const App = () => {
@@ -42,11 +42,11 @@ const App = () => {
 
   return (
     <>
-      <h1>Sword Creator</h1>
+      <h2>Sword Creator</h2>
       <div className="card">
         <div className="color-controls">
-          <label>
-            Tip Color:
+          <div className="container">
+            <label> Tip Color: </label>
             <select 
               value={selectedTipColor} 
               onChange={(e) => setSelectedTipColor(Number(e.target.value))}
@@ -57,10 +57,10 @@ const App = () => {
                 </option>
               ))}
             </select>
-          </label>
+          </div>
 
-          <label>
-            Select split:
+          <div className="container">
+            <label> Color split: </label>
             <select 
               value={split} 
               onChange={(e) => setSplit(e.target.value)}
@@ -71,11 +71,11 @@ const App = () => {
                 </option>
               ))}
             </select>
-          </label>
+          </div>
 
           { split === 'All 1 color' && (
-            <label>
-              Blade Color:
+            <div className="container">
+              <label> Blade Color:  </label>
               <select 
                 value={selectedBladeColor}
                 onChange={(e) => setSelectedBladeColor(Number(e.target.value))}
@@ -86,13 +86,13 @@ const App = () => {
                   </option>
                 ))}
               </select>
-            </label>
+            </div>
           )}
           
-          { split === '50% top / 50% bottom split' && (
+          { split === '50% / 50%' && (
             <>
-              <label>
-                Top Half Color:
+              <div className="container">
+                <label> Top Half Color: </label>
                 <select 
                   value={selectedTopHalfColor} 
                   onChange={(e) => setSelectedTopHalfColor(Number(e.target.value))}
@@ -103,7 +103,7 @@ const App = () => {
                     </option>
                   ))}
                 </select>
-              </label>
+              </div>
               
               <label>
                 Bottom Half Color:
@@ -121,7 +121,7 @@ const App = () => {
             </>
           )}
 
-          { split === '75% top / 25% bottom split' && (
+          { split === '75% / 25%' && (
             <>
               <label>
                 Top 75% Color:
