@@ -111,6 +111,7 @@
 
 .color-controls select {
   padding: 0.5rem;
+  color: #000;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: white;
