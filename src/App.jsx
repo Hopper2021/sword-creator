@@ -162,13 +162,13 @@ const App = () => {
               style={{ backgroundColor: COLORS[selectedBladeColor].value }}
             >
               <div className="tip" style={{ backgroundColor: COLORS[selectedTipColor].value }}></div>
-              { split === '50% top / 50% bottom split' && (
+              { split === '50% / 50%' && (
                 <>
                 <div className="top-half" style={{ backgroundColor: COLORS[selectedTopHalfColor].value }}></div>
                 <div className="bottom-half" style={{ backgroundColor: COLORS[selectedBottomHalfColor].value }}></div>
                 </>
               )}
-              { split === '75% top / 25% bottom split' && (
+              { split === '75% / 25%' && (
                 <>
                 <div className="top-seventy-five" style={{ backgroundColor: COLORS[selectedTopSeventyFiveColor].value }}></div>
                 <div className="bottom-twenty-five" style={{ backgroundColor: COLORS[selectedBottomTwentyFiveColor].value }}></div>
